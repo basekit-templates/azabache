@@ -1,0 +1,59 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-homepage">
+
+
+<div class="left">
+        <header>
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </header>
+        <div class="vertical-nav">
+            {{widget('extendednavigation', 'navigationheader', {})|raw}}
+        </div>
+</div>
+
+
+
+<div class="top-nav wrapper clearfix">
+    <header>
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+    </header>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+</div>
+
+
+
+
+<div class="right">
+
+    <div class="main wrapper clearfix">
+
+        <div class="feature-slideshow">
+            {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': false, 'showBullets': true, 'allowPause': false, 'allowLoop': true, 'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/1.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/2.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/3.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/4.jpg'), 'title':'test title', 'description': 'test desc'}]})|raw}}
+        </div>
+
+            {{zone('main')|raw}}
+
+    </div>  
+
+</div>
+
+
+
+<footer>
+    <div class="wrapper clearfix">       
+            {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+            {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+    </div>
+</footer>
+
+
+</div>
+
+{% endblock %}
