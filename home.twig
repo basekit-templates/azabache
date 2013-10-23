@@ -35,7 +35,23 @@
     <div class="main wrapper clearfix">
 
         <div class="feature-slideshow">
-            {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': false, 'showBullets': true, 'allowPause': false, 'allowLoop': true, 'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/1.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/2.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/3.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/gallery/4.jpg'), 'title':'test title', 'description': 'test desc'}]})|raw}}
+             {{widget('responsiveslideshow', 'responsiveslideshow',
+              {'duration':'3',
+                'transSpeed': '1000',
+                'transType': 'fade',
+                'showButtons': true,
+                'showBullets': false,
+                'allowPause': false,
+                'allowLoop': true,
+                'showDescription': false,
+                'showTitle': false,
+                'images':
+                  [
+                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/1.jpg'), 'title':'', 'description': ''},
+                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/2.jpg'), 'title':'', 'description': ''},
+                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/3.jpg'), 'title':'', 'description': ''}
+                  ]
+                })|raw}}
         </div>
 
             {{zone('main')|raw}}
