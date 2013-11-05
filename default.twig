@@ -7,8 +7,8 @@
 
 <div class="left">
         <header>
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('logo', 'sidelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'sidecompanyname', {"business": "profile"})|raw}}
         </header>
         <div class="vertical-nav">
             {{widget('extendednavigation', 'sidenavigation', {})|raw}}
@@ -20,13 +20,12 @@
 <div class="top-nav wrapper clearfix">
     <header>
         <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('logo', 'toplogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'topcompanyname', {"business": "profile"})|raw}}
         </div>
     </header>
         {{widget('extendednavigation', 'topnavigation', {})|raw}}
 </div>
-
 
 
 
