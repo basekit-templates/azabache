@@ -3,9 +3,9 @@
 	"thumbnail":"azabache.png",
 	"screenshot":"azabache.png",
     "tags": {
-    "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "restaurant", "sans-serif", "bar", "coffee shop", "cafe"],
-    "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "restaurante", "sans-serif", "bar", "cafetería"],
-    "br": ["minimalista", "limpo", "fotografia", "moderno", "colorido", "flexível", "aberto", "simples", "restaurante", "sans-serif", "bar", "café"]
+    "en": ["minimal", "clean", "modern", "slideshow", "studio", "website", "creative", "elegant", "professional", "unique", "media"],
+    "es": ["minimalista", "limpio", "moderno", "slideshow", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion"],
+    "br": ["minimalista", "limpo", "moderno", "slideshow", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia"]
     },
 	"colorSwatches":
     {
@@ -120,9 +120,9 @@
         },
         "font8": {
             "font-family": "PT Serif",
-            "font-size": "40px",
+            "font-size": "36px",
             "font-weight": "400",
-            "line-height": "50px",
+            "line-height": "46px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
