@@ -1664,8 +1664,6 @@ footer {
 }
 
 
-
-
 .widget.profile .twitter {
   width: 50%;
 }
@@ -1692,21 +1690,30 @@ footer {
   float: left;
 }
 
+
+  /* Nav overlay on editor */
+
+
+    #page-zones__template-widgets__extendednavigation-navigationheader-bk-overlay {
+      width: 150px;
+      top: -100px !important;
+      left: 85% !important;
+      float: right !important;
+      height: 100px;
+    }
+
     /* NAV */
 
 
   .top-nav {
     border-bottom: 1px solid @color-swatch2;
-    padding-bottom: 16px;
   }
 
 
   .widget.extendednavigation {
       display: block;
-      background: red;
-      width: 40px;
-      float: right;
-      margin: 0 4%;
+      width: 90%;
+      margin: 50px auto 0;
   }
 
    /* NAV ICON */
@@ -1726,7 +1733,7 @@ footer {
     display: inline-block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -55px;
   }
 
   /* NAV */
