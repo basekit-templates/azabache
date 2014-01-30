@@ -286,7 +286,6 @@ footer h4 {
 }
 
 .vertical-nav .widget.extendednavigation ul {
-    padding: 10px;
     margin: 0;
     text-align: center;
 }
@@ -320,7 +319,7 @@ footer h4 {
 
 .vertical-nav .widget.extendednavigation ul li a {
     display: block;
-    padding: 10px;
+    padding: 10px 15px;
     font-family: @font-swatch6-font-family;
     font-size: @font-swatch6-font-size;
     font-weight: @font-swatch6-font-weight;
@@ -348,14 +347,14 @@ footer h4 {
 
 /* FOLDER */
 
-.vertical-nav .widget.extendednavigation ul li.folder {
+.widget.extendednavigation ul li.folder .text {
     background-image: image('/images/arrow-down.png');
     background-position: right center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
-.vertical-nav .widget.extendednavigation ul li.folder .text:hover {
+.widget.extendednavigation ul li.folder .text:hover {
     color: @font-swatch6-color-hover;
     background-image: image('/images/arrow-down.png');
     background-position: right center;
@@ -395,6 +394,10 @@ footer h4 {
     display: block;
     color: @color-swatch5;
     padding: 0;
+}
+
+.widget.extendednavigation li:hover > ul > li .text, .widget.extendednavigation li:hover > ul > li .text:hover {
+  background-image: none;
 }
 
 /* EXTENDED NAVIGATION - INSIDE ZONE */
