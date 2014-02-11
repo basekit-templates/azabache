@@ -10,7 +10,7 @@ a {
     font-family: @font-swatch2-font-family;
     font-size: @font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
-    color: @color-swatch2;
+    color: darken(@color-swatch2, 20%);
     text-decoration: none;
 }
 
@@ -346,6 +346,12 @@ footer h4 {
 }
 
 /* FOLDER */
+
+.widget.extendednavigation ul li.folder {
+	&:after {
+		display: none;
+	}
+}
 
 .widget.extendednavigation ul li.folder .text {
     background-image: image('/images/arrow-down.png');
@@ -1161,6 +1167,7 @@ hr.line.align-right {
 .widget.tweet a:hover, .tweet a:active {
   cursor: pointer;
   background-color: @font-swatch7-background-color-hover;
+  background-image: image('/images/social/socialicons-twitter.png');
 }
 
 /* ===============================
@@ -1185,6 +1192,9 @@ hr.line.align-right {
   text-decoration: none;
   letter-spacing: 1px;
   cursor: pointer;
+  &:hover {
+	    background-color: @font-swatch7-background-color-hover;
+  }
 }
 
 /* ===============================
@@ -1384,7 +1394,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.profile fieldset input {
+.widget.profile form fieldset input {
     height: 40px;
     width: 100%;
     border: none;
@@ -1446,7 +1456,7 @@ footer .widget.profile .twitter span {
    =============================== */
 
 .widget.map {
-  border: 1px solid #dddddd;
+  border: 1px solid @color-swatch2;
 }
 
 /* ===============================
@@ -1465,7 +1475,7 @@ footer .widget.profile .twitter span {
     padding: 0;
 }
 
-.widget.signupform fieldset label {
+.widget.signupform fieldset label, label {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -1476,7 +1486,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.signupform fieldset input {
+.widget.signupform fieldset input, input[type="search"] {
     height: 40px;
     width: 100%;
     border: none;
@@ -1491,12 +1501,12 @@ footer .widget.profile .twitter span {
     padding: 0;
 }
 
-.widget.signupform fieldset input:focus {
+.widget.signupform fieldset input:focus, input[type="search"]:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.signupform fieldset button.btn {
+.widget.signupform fieldset button.btn, .blog-search-submit-button {
     padding: 16px 40px;
     margin: 0;
     border: none;
@@ -1508,6 +1518,10 @@ footer .widget.profile .twitter span {
     color: @font-swatch7-color;
     text-decoration: none;
     letter-spacing: 1px;
+	cursor: pointer;
+    &:hover {
+    	background-color: @font-swatch7-background-color-hover;	    
+    }
 }
 
 .widget.signupform fieldset button.btn:hover {
