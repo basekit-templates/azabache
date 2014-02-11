@@ -106,7 +106,7 @@ blockquote:before {
 }
 
 .bk-content-text ul, .bk-content-text ol, .bk-content-text li {
-  padding-left: 1.4em; 
+  padding-left: 1.4em;
   text-indent: -1.4em;
 }
 
@@ -154,7 +154,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-header {
+.bk-header {
   padding: 0px;
   margin: 45px 0 29px 0;
 }
@@ -162,7 +162,7 @@ header {
 
 /* SUB NAV */
 
-header nav {
+.bk-header nav {
   width: 100%;
   background-color: @color-swatch7;
 }
@@ -319,7 +319,7 @@ footer h4 {
 
 .vertical-nav .widget.extendednavigation ul li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font-family: @font-swatch6-font-family;
     font-size: @font-swatch6-font-size;
     font-weight: @font-swatch6-font-weight;
@@ -441,7 +441,7 @@ footer h4 {
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget {
-     background-color: transparent; 
+     background-color: transparent;
 }
 .feature-slideshow .widget.responsiveslideshow span.inner img {
    width: auto;
@@ -463,7 +463,7 @@ footer h4 {
     position:absolute;
     left:0;
     top: 25px;
-    background-color: transparent; 
+    background-color: transparent;
     text-align: left;
     z-index: 999;
     height: 100%;
@@ -493,7 +493,7 @@ footer h4 {
     letter-spacing: @font-swatch9-letter-spacing;
 }
 
-.feature-slideshow .widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.feature-slideshow .widget.responsiveslideshow .slideshow-widget .btn-prev,
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget .btn-next {
     font-size: 0;
     z-index: 11;
@@ -513,12 +513,12 @@ footer h4 {
 
 .feature-slideshow .svg .widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
-  background: image('/images/slideshow-arrow-right.svg') no-repeat center right; 
-  background-size: 45px;   
+  background: image('/images/slideshow-arrow-right.svg') no-repeat center right;
+  background-size: 45px;
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget .btn-next {
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget-controls {
@@ -539,8 +539,16 @@ footer h4 {
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
     background: image('/images/slideshow-pause.png') center no-repeat;
-    background-size: contain;  
+    background-size: contain;
     z-index: 99999;
+}
+
+.widget.responsiveslideshow .btn-play:after {
+	display: none;
+}
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next {
+    width: 30px;
+    height: 30px;
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget-controls .dot
@@ -572,7 +580,7 @@ footer h4 {
 }
 
 
-@media only screen and (max-width: 1024px) { 
+@media only screen and (max-width: 1024px) {
 
 
 .right {
@@ -707,7 +715,7 @@ footer h4 {
 }
 
 
-.widget.button button:hover 
+.widget.button button:hover
 {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -1076,7 +1084,7 @@ hr.line.align-right {
     text-decoration: none;
     letter-spacing: 1px;
 }
-  
+
 .widget.contactform fieldset button.btn:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -1143,7 +1151,7 @@ hr.line.align-right {
 .widget.tweet .tweet{
    margin: 0 0 10px;
    padding: 14px 0;
-   
+
 }
 
 .widget.tweet a {
@@ -1520,7 +1528,7 @@ footer .widget.profile .twitter span {
     letter-spacing: 1px;
 	cursor: pointer;
     &:hover {
-    	background-color: @font-swatch7-background-color-hover;	    
+    	background-color: @font-swatch7-background-color-hover;
     }
 }
 
@@ -1537,7 +1545,7 @@ footer .widget.profile .twitter span {
 }
 
 .widget.responsiveslideshow .slideshow-widget {
-     background-color: transparent; 
+     background-color: transparent;
 }
 .widget.responsiveslideshow span.inner img {
    width: auto;
@@ -1557,7 +1565,7 @@ footer .widget.profile .twitter span {
     left:0;
     right:0;
     top:auto;
-    background-color: @color-swatch1; 
+    background-color: @color-swatch1;
     text-align: center;
     z-index: 999;
 }
@@ -1584,7 +1592,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.widget.responsiveslideshow .slideshow-widget .btn-prev,
 .widget.responsiveslideshow .slideshow-widget .btn-next {
     font-size: 0;
     z-index: 11;
@@ -1599,7 +1607,7 @@ footer .widget.profile .twitter span {
 
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
@@ -1618,7 +1626,7 @@ footer .widget.profile .twitter span {
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
     background: image('/images/slideshow-pause.png') center no-repeat;
-    background-size: contain;  
+    background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
@@ -1653,7 +1661,7 @@ footer .widget.profile .twitter span {
    IPAD WIDTH
    =============================== */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
 
 
 .right {
@@ -1685,7 +1693,7 @@ footer .widget.profile .twitter span {
   margin: 0;
 }
 
-header {
+.bk-header {
   padding: 1.2em 0;
   width: 90%;
   margin: 0 auto;
@@ -1777,7 +1785,7 @@ footer {
 .widget.extendednavigation ul li > ul {
   display: none !important;
 }
-  
+
  .widget .extendednavigation ul {
     display: none;
     border-top: 1px solid @color-swatch2;
@@ -1895,7 +1903,7 @@ footer {
 
     /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-image-list,
     .widget.responsiveslideshow .slideshow-widget {
         height:400px;
     }
@@ -1906,7 +1914,7 @@ footer {
    IPHONE WIDTH
    =============================== */
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
 
     footer {
         padding: 1.5em 0;
@@ -1960,7 +1968,7 @@ footer {
     .feature-slideshow {
       margin-top: 10px;
       height: 500px;
-    }  
+    }
 
     .feature-slideshow .widget.responsiveslideshow .slideshow-widget {
       width: 100%;
@@ -1992,7 +2000,7 @@ footer {
     }
 
     .feature-slideshow .widget.responsiveslideshow .description {
-        
+
       padding: 0;
       font-family:@font-swatch9-font-family;
       font-size:bkscale(@font-swatch9-font-size,0.85);
@@ -2053,7 +2061,7 @@ footer {
         text-align: justify;
     }
 
-    .widget.clicktocall a.italic { 
+    .widget.clicktocall a.italic {
         font-style: italic;
     }
 
@@ -2106,7 +2114,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 1140px) { 
+@media only screen and (min-width: 1140px) {
     .wrapper {
         width: 1024px;
         /* 1140px - 10% for margins */
