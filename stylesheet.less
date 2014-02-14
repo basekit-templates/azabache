@@ -44,6 +44,9 @@ h2 {
     line-height: @font-swatch2-line-height;
     color: @font-swatch2-color;
     letter-spacing: @font-swatch2-letter-spacing;
+    a {
+   		font-size: @font-swatch2-font-size;
+    }
 }
 
 h3 {
@@ -783,11 +786,102 @@ hr.line.align-right {
 }
 
 /* ===============================
+   MENU WIDGET
+   =============================== */
+
+.widget.menu .menu-items {
+			column-rule: solid 1px @color-swatch7;
+	-webkit-column-rule: solid 1px @color-swatch7;
+	   -moz-column-rule: solid 1px @color-swatch7;
+	    -ms-column-rule: solid 1px @color-swatch7;
+		 -o-column-rule: solid 1px @color-swatch7;
+}
+
+.menu .menu-item-image-wrap {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid @color-swatch7;
+	box-shadow: inset 0 0 0 1px @color-swatch1;
+	height: 240px;
+	img {
+		display: none;
+	}
+}
+
+.menu .menu-subsection {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.menu-subsection-header {
+	padding-bottom: 1em;
+}
+
+@media @tablet {
+	.widget.menu .menu-items.odd {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+
+	}
+}
+
+/* ===============================
+   BLOG WIDGET
+   =============================== */
+
+.blog-post-feature-image-wrap {
+	background-repeat: no-repeat;
+	float: left;
+	width: 40%;
+	margin-right: 20px;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid @color-swatch7;
+	box-shadow: inset 0 0 0 1px @color-swatch1;
+	@media @tablet {
+		width: 100%;
+	}
+	img {
+		display: none;
+	}
+}
+
+.blog-post-item {
+	clear: both;
+	padding-bottom: 40px;
+	float: left;
+	width: 100%;
+}
+
+.widget.blogsearch {
+	clear: both;
+}
+
+.blogpost {
+	.blog-post-feature-image-wrap {
+		float: right;
+		margin-right: 0;
+		margin-left: 20px;
+	}
+}
+
+.blog-post-published-date {
+	float: right;
+}
+
+.blog-post-publish-date {
+	color: @color-swatch5;
+}
+
+/* ===============================
    GALLERY WIDGET
    =============================== */
 
-.widget.gallery
-{
+.widget.gallery {
+	margin-left: 0;
 }
 
 .widget.gallery ul {
@@ -1156,11 +1250,11 @@ hr.line.align-right {
 
 .widget.tweet a {
   margin: 0;
-  padding: 16px 40px 16px 63px;
+  padding: 16px 20px 16px 43px;
   background-image: image('/images/social/socialicons-twitter.png');
   background-size: 20px;
   background-repeat: no-repeat;
-  background-position: 35px center;
+  background-position: 15px center;
   margin: 2.2em auto;
   border: none;
   font-family: @font-swatch7-font-family;
@@ -1402,11 +1496,13 @@ color: @color-swatch5;
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.profile form fieldset input {
+.widget.profile form fieldset input,
+.widget.signupform fieldset input,
+input[type="search"] {
+	margin-right: -4px;
     height: 40px;
-    width: 100%;
     border: none;
-    background-color: #ffffff;
+    background-color: lighten(@color-swatch1, 30%);
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
@@ -1421,8 +1517,10 @@ color: @color-swatch5;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.profile fieldset button.btn {
-    padding: 16px 40px;
+.widget.profile fieldset button.btn,
+.widget.signupform fieldset button.btn,
+.blog-search-submit-button {
+    padding: 7px 20px 8px;
     margin: 0;
     border: none;
     font-family: @font-swatch7-font-family;
@@ -1495,15 +1593,13 @@ color: @color-swatch5;
 }
 
 .widget.signupform fieldset input, input[type="search"] {
-    height: 40px;
-    width: 100%;
     border: none;
     background-color: #ffffff;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 8px;
-    margin-top: 6px;
+    margin-top: 0;
     margin-bottom: 20px;
     float:left;
     padding: 0;
@@ -1515,7 +1611,7 @@ color: @color-swatch5;
 }
 
 .widget.signupform fieldset button.btn, .blog-search-submit-button {
-    padding: 16px 40px;
+	line-height: 25px;
     margin: 0;
     border: none;
     background-color: lighten(@color-swatch5,30%);
@@ -1617,7 +1713,10 @@ color: @color-swatch5;
 .widget.responsiveslideshow .slideshow-widget .btn-play
 {
     background: image('/images/slideshow-play.png') center no-repeat;
-    background-size: contain;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
     border-radius:10px;
     font-size:0;
     text-indent: -99999px;
@@ -1909,6 +2008,32 @@ color: @color-swatch5;
     }
 
 }
+
+// BETTER FORMS
+input[type=search],
+input[type=email],
+input[type=password],
+input[type=text],
+.widget.contactform fieldset input,
+.widget.profile form fieldset input,
+.widget.signupform fieldset input,
+.widget.contactform fieldset textarea.message {
+	padding: 8px 10px;
+	text-indent: 0;
+	width: auto;
+	min-width: 200px;
+}
+
+.widget.contactform fieldset {
+	input.email, textarea.message {
+		width: 100%;
+	}
+}
+
+.widget.contactform fieldset textarea.message {
+	resize: vertical;
+}
+
 
 /* ===============================
    IPHONE WIDTH
