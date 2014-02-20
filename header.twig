@@ -1,0 +1,22 @@
+
+<!-- Desktop navigation -->
+<div class="left">
+	<header class="bk-header">
+		{{widget('logo', 'sidelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('companyname', 'sidecompanyname', {"business": "profile"})|raw}}
+	</header>
+	<div class="vertical-nav">
+		{{widget('extendednavigation', 'sidenavigation', {})|raw}}
+	</div>
+</div>
+
+<!-- Mobile navigation -->
+<div class="top-nav wrapper clearfix">
+	<header class="bk-header">
+		<div class="companyheader clearfix">
+			{{widget('logo', 'toplogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'topcompanyname', {"business": "profile"})|raw}}
+		</div>
+	</header>
+	{{widget('extendednavigation', 'topnavigation', {})|raw}}
+</div>
