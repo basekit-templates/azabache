@@ -2,6 +2,7 @@
 	"name":"Azabache",
 	"thumbnail":"azabache.png",
 	"screenshot":"azabache.png",
+	"templateType":"standard",
     "tags": {
     "en": ["minimal", "clean", "modern", "slideshow", "studio", "website", "creative", "elegant", "professional", "unique", "media"],
     "es": ["minimalista", "limpio", "moderno", "slideshow", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion"],
