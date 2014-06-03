@@ -3,11 +3,17 @@
 	"thumbnail":"azabache.png",
 	"screenshot":"azabache.png",
 	"templateType":"standard",
+    "pageTypes": ["default", "home"],
     "tags": {
     "en": ["minimal", "clean", "modern", "slideshow", "studio", "website", "creative", "elegant", "professional", "unique", "media"],
     "es": ["minimalista", "limpio", "moderno", "slideshow", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion"],
     "br": ["minimalista", "limpo", "moderno", "slideshow", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia"]
     },
+    "images":[
+    "images/gallery/1.jpg",
+    "images/gallery/2.jpg",
+    "images/gallery/3.jpg"
+    ],
 	"colorSwatches":
     {
         "Swatch 1": {
