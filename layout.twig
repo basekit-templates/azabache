@@ -10,30 +10,15 @@
 <html class="no-js" lang="{{ page.seoLang }}">
 <!--<![endif]-->
 	<head>
-
 		{% include "head.twig" %}
-
 		{% include basekit.headScript %}
-	
 	</head>
+
 	<body class="{{ page.backgroundClass }}">
-
 		{% include "header.twig" %}
-		
-		<div class="bk-pt-homepage">
-		
-			<div class="right">
-
-				{% block content %}
-				{% endblock %}
-
-		
-			</div>
-			
-			{% include "footer.twig" %}
-			
-		</div>
-
+		{% block content %}
+		{% endblock %}			
+		{% include "footer.twig" %}
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
@@ -42,10 +27,9 @@
 				if (supportsSVG()) document.documentElement.className += ' svg'
 			}()
 		</script>
-
 		{% include basekit.bodyScript %}
-
 	</body>
+	
 </html>
 
 
