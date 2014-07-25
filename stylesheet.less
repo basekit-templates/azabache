@@ -113,6 +113,13 @@ blockquote:before {
   text-indent: -1.4em;
 }
 
+button.btn {
+	padding: 16px 40px;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+	}
+}
+
 
 /* ===============================
    CUSTOM CSS
@@ -137,7 +144,8 @@ blockquote:before {
         width: 100%;
         padding: 0;
         position: relative;
-        }
+        overflow: visible;
+    }
 }
 
 .zone-area {
@@ -205,7 +213,7 @@ blockquote:before {
 
 .bk-footer {
     background-color: @color-swatch2;
-    padding: 20px 0 20px 230px;
+    padding: 20px 0 20px 300px;
     margin-top: 3em;
     color: @color-swatch6;
     text-align: left;
@@ -256,7 +264,7 @@ blockquote:before {
                 /* Then these styles are applied */
                 width: 100%;
                 margin: 0;
-                padding: 55px 0 0;
+                padding: 45px 0 0;
                 background-color: transparent;
             }
             li {
@@ -677,8 +685,8 @@ blockquote:before {
    BUTTON CSS
    =============================== */
 
-.widget.button button
-{
+.widget.button button,
+.ecom-product-go-to-checkout-btn {
   padding: 16px 40px;
   margin: 0;
   border: none;
@@ -820,6 +828,7 @@ hr.line.align-right {
 	float: left;
 	width: 40%;
 	margin-right: 20px;
+	margin-bottom: 10px;
 	height: 200px;
 	background-size: cover;
 	background-position: center;
@@ -1110,7 +1119,10 @@ hr.line.align-right {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform fieldset input,
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
     height: 40px;
     width: 100%;
     border: none;
@@ -1119,14 +1131,13 @@ hr.line.align-right {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 8px;
-    margin-top: 6px;
+    //margin-top: 6px;
     margin-bottom: 30px;
     padding: 0;
-}
-
-.widget.contactform fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px @color-swatch3;
+    &:focus {
+	    outline: none;
+	    box-shadow: 0 0 5px @color-swatch3;
+	}
 }
 
 .widget.contactform fieldset textarea {
@@ -1565,7 +1576,8 @@ input[type="search"] {
     padding: 0;
 }
 
-.widget.signupform fieldset label, label {
+.widget.signupform fieldset label, label,
+.form-group.productlist-search:before {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -1648,7 +1660,7 @@ input[type="search"] {
     left:0;
     right:0;
     top:auto;
-    background-color: @color-swatch1;
+    background-color: fadeout(@color-swatch1, 50%);
     text-align: center;
     z-index: 999;
 }
@@ -1681,6 +1693,8 @@ input[type="search"] {
     z-index: 11;
     text-indent: -99999px;
     opacity: 0.5;
+    top: 50%;
+    margin-top: -15px;
 }
 
 
@@ -1707,6 +1721,10 @@ input[type="search"] {
     border-radius:10px;
     font-size:0;
     text-indent: -99999px;
+	top: 50%;
+	left: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
 }
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
@@ -1744,44 +1762,127 @@ input[type="search"] {
 }
 
 /* ===============================
+   ECOMMERCE
+   =============================== */
+
+.form-group.productlist-search input[type=search] {
+	width: 100%;
+}
+
+.productlist-filter {
+	.form-group {
+		width: 25%;
+	}
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+	padding: 10px;
+	margin: 0;
+	float: left;
+	&:first-child {
+		padding-left: 0;
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.form-group.productlist-search:before {
+	content: "Search";
+	display: inline-block;
+}
+
+.form-group.productlist-search {
+	position: relative;
+	input[type=search] {
+		padding-right: 90px;
+	}
+	button {
+		position: absolute;
+		right: 0;
+		margin: 0;
+		top: initial;
+		bottom: 29px;
+	}
+}
+
+.widget.profile form fieldset button {
+	bottom: 0;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
+	cursor: pointer;
+	position: relative;
+	height: @font-swatch5-font-size + 25;
+}
+
+
+/* ===============================
    IPAD WIDTH
    =============================== */
 
 @media only screen and (max-width: 768px) {
 
-.main {
-    padding: 1em 0;
-}
-
-.bk-footer {
-  min-height: auto;
-  padding: 3% 5%;
-}
-
-.widget.profile .twitter {
-  width: 50%;
-}
-
-/* FEATURE */
-
-.feature-slideshow {
-  margin: 0 0 50px;
-}
-
- /* GALLERY */
-
-.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-font-size:bkscale(@font-swatch5-font-size,0.9);
-line-height:bkscale(@font-swatch5-line-height,0.9);
-}
-
-/* SLIDESHOW */
-
-.widget.responsiveslideshow .slideshow-image-list,
-.widget.responsiveslideshow .slideshow-widget {
-    height:400px;
-}
-
+	.main {
+	    padding: 1em 0;
+	}
+	
+	.bk-footer {
+	  min-height: auto;
+	  padding: 3% 5%;
+	}
+	
+	.widget.profile .twitter {
+	  width: 50%;
+	}
+	
+	/* FEATURE */
+	
+	.feature-slideshow {
+	  margin: 0 0 50px;
+	}
+	
+	 /* GALLERY */
+	
+	.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+		font-size:bkscale(@font-swatch5-font-size,0.9);
+		line-height:bkscale(@font-swatch5-line-height,0.9);
+	}
+	
+	/* SLIDESHOW */
+	
+	.widget.responsiveslideshow .slideshow-image-list,
+	.widget.responsiveslideshow .slideshow-widget {
+	    height:400px;
+	}
+	
+	/* ECOMMERCE */
+	.productlist-display-form {
+		label {
+			display: inline-block;
+			width: 19%;
+		}
+		select {
+			width: 80%;
+		}
+	}
+	.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+		width: 100%;
+		padding: 0 0 10px;
+	}
+	.form-group {
+		select {
+			float: right;
+		}
+		input[type=search], select {
+			margin-bottom: 0;
+		}
+		&.productlist-search button {
+			bottom: 10px;
+		}
+	}
 }
 
 // BETTER FORMS
@@ -1792,11 +1893,13 @@ input[type=text],
 .widget.contactform fieldset input,
 .widget.profile form fieldset input,
 .widget.signupform fieldset input,
-.widget.contactform fieldset textarea.message {
+.widget.contactform fieldset textarea.message,
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
+	border-radius: 0;
 	padding: 8px 10px;
 	text-indent: 0;
-	width: auto;
-	min-width: 200px;
 }
 
 .widget.contactform fieldset {
@@ -1971,7 +2074,13 @@ input[type=text],
       line-height:@font-swatch5-line-height;
       color: @font-swatch4-color;
     }
-
+    
+     /* ECOMMERCE */
+	.productlist-display-form {
+		select, label {
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and (min-width: 1140px) {
