@@ -246,6 +246,7 @@ button.btn {
         @media @tablet {
             background-color: darken(@color-swatch7,3%);
             float: left;
+            width: 100%;
             margin-bottom: 0;
         }
         li {
@@ -253,6 +254,12 @@ button.btn {
                 display: none !important;
             }
         }
+		.selected {
+			a {
+                color: @font-swatch6-color-hover;
+                text-decoration: underline;
+			}
+		}
         ul {
            
             float: none;
@@ -324,7 +331,6 @@ button.btn {
                         text-decoration: underline;
                     }
                 }
-
                 &.folder {
                     /* Folder dropdown arrow BG style goes Here */  
                     margin-right: 20px;            
