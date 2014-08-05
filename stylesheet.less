@@ -1512,7 +1512,6 @@ color: @color-swatch5;
 .widget.profile form fieldset input,
 .widget.signupform fieldset input,
 input[type="search"] {
-	margin-right: -4px;
     height: 40px;
     border: none;
     background-color: lighten(@color-swatch1, 30%);
@@ -1594,8 +1593,7 @@ input[type="search"] {
     padding: 0;
 }
 
-.widget.signupform fieldset label, label,
-.form-group.productlist-search:before {
+.widget.signupform fieldset label, label {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -1615,7 +1613,6 @@ input[type="search"] {
     text-indent: 8px;
     margin-top: 0;
     margin-bottom: 20px;
-    float:left;
     padding: 0;
 }
 
@@ -1783,49 +1780,42 @@ input[type="search"] {
    ECOMMERCE
    =============================== */
 
-.form-group.productlist-search input[type=search] {
-	width: 100%;
-}
-
-.productlist-filter {
-	.form-group {
-		width: 25%;
-	}
-}
-
-.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-	padding: 10px;
-	margin: 0;
-	float: left;
-	&:first-child {
-		padding-left: 0;
-	}
-	&:last-child {
-		padding-right: 0;
-	}
-}
-
-.form-group.productlist-search:before {
-	content: "Search";
-	display: inline-block;
+.widget.ecombasket {
+	margin-bottom: 20px;
 }
 
 .form-group.productlist-search {
 	position: relative;
 	input[type=search] {
 		padding-right: 90px;
+		box-sizing: border-box;
 	}
 	button {
+		padding: 8px 10px;
+		margin: 0;
 		position: absolute;
 		right: 0;
-		margin: 0;
-		top: initial;
-		bottom: 29px;
+		top: 0;
 	}
 }
 
-.widget.profile form fieldset button {
-	bottom: 0;
+.productlist-display-form {
+	text-align: right;
+	label {
+		display: inline-block;
+		width: 19%;
+		text-align: left;
+	}
+	select, input[type=search] {
+		width: 80%;
+		margin: 0;
+	}
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group,
+.productlist-display-form .form-group {
+	margin: 0 0 20px;
+	width: 100%;
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
@@ -1874,32 +1864,6 @@ select {
 	.widget.responsiveslideshow .slideshow-image-list,
 	.widget.responsiveslideshow .slideshow-widget {
 	    height:400px;
-	}
-	
-	/* ECOMMERCE */
-	.productlist-display-form {
-		label {
-			display: inline-block;
-			width: 19%;
-		}
-		select {
-			width: 80%;
-		}
-	}
-	.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-		width: 100%;
-		padding: 0 0 10px;
-	}
-	.form-group {
-		select {
-			float: right;
-		}
-		input[type=search], select {
-			margin-bottom: 0;
-		}
-		&.productlist-search button {
-			bottom: 10px;
-		}
 	}
 }
 
