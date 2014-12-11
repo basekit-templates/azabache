@@ -458,11 +458,14 @@ button.btn,
    =============================== */
 
 .feature-slideshow {
-  margin: 70px 0;
+  margin: 50px 0;
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
-    height: 500px;
+    height: 410px;
+    @media @mobile {
+        height: 350px;
+    }
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget {
@@ -494,6 +497,10 @@ button.btn,
     height: 100%;
     width: 55%;
     padding: 30px 30px 30px 0;
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        top: 56px;
+        width: 50%;
+    }
 }
 
 .feature-slideshow .widget.responsiveslideshow .title {
@@ -547,8 +554,8 @@ button.btn,
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget-controls {
-  margin: 10px 0;
-  text-align: right;
+  margin: 0;
+  text-align: left;
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-widget .btn-play
@@ -611,7 +618,7 @@ button.btn,
 	}
 	
 	.feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
-	    height: 500px;
+	    height: 410px;
 	}
 	
 	.feature-slideshow .widget.responsiveslideshow .title {
@@ -1960,7 +1967,7 @@ select {
     }
 
     .feature-slideshow .widget.responsiveslideshow .slideshow-widget-controls {
-      text-align: center;
+      text-align: left;
     }
 
 
