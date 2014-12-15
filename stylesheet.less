@@ -459,6 +459,9 @@ button.btn,
 
 .feature-slideshow {
   margin: 50px 0;
+  .widget.responsiveslideshow .slideshow-image-list.crop span.inner.square, .widget.responsiveslideshow .slideshow-image-list.crop span.inner.portrait, .widget.responsiveslideshow .slideshow-image-list.crop span.inner.landscape {
+    background-image: none !important;
+  }
 }
 
 .feature-slideshow .widget.responsiveslideshow .slideshow-image-list {
@@ -477,6 +480,7 @@ button.btn,
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
     border-radius: 200px;
+    display: block;
 }
 
 .feature-slideshow .widget.responsiveslideshow .image-wrapper {
