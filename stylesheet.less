@@ -281,7 +281,7 @@ button.btn,
             }
         }
 		.selected {
-			a {
+			a .text {
                 color: @font-swatch6-color-hover;
                 text-decoration: underline;
 			}
@@ -342,6 +342,9 @@ button.btn,
                     padding-top: 15px;
                     padding-bottom: 15px;
                     display: inline-block;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 a {
                     display: block;
