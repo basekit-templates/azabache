@@ -376,9 +376,6 @@ button.btn,
                         position: relative;
                         padding-right: 1px;
                         padding-left: 1px;
-                        @media @tablet {
-
-                        }
                         &:after {
                             content: "\25BC";
                             font-size: 5px;
@@ -388,11 +385,14 @@ button.btn,
                             z-index: 9999999;
                             right: 0;
                             margin-top: -12px;
-                            color: @color-swatch6;
+                            color: @font-swatch6-color;
                             @media @tablet {
                                 font-size: 10px;
                                 padding-right: 10px;
                             }
+                        }
+                        &:hover:after {
+                            color: @font-swatch6-color-hover;
                         }
                         &:hover {
                             color: @font-swatch6-color-hover;
