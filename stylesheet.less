@@ -907,6 +907,7 @@ hr.line.align-right {
 }
 
 .blogpost {
+    .clearfix;
 	.blog-post-feature-image-wrap {
 		float: right;
 		margin-right: 0;
@@ -931,6 +932,10 @@ hr.line.align-right {
             margin-bottom: 20px;
         }
     }
+}
+
+.blogpostlist {
+    .clearfix;
 }
 
 /* ===============================
@@ -1564,7 +1569,6 @@ input[type="search"] {
 	line-height: 25px;
     margin: 0;
     border: none;
-    background-color: lighten(@color-swatch5,30%);
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
     font-weight:@font-swatch7-font-weight;
@@ -1577,6 +1581,13 @@ input[type="search"] {
     vertical-align: top;
     &:hover {
     	background-color: @font-swatch7-background-color-hover;
+    }
+}
+
+.widget.signupform fieldset button.btn {
+    margin-left: -5px;
+    @media @mobile {
+        margin-left: 0;
     }
 }
 
