@@ -1473,25 +1473,6 @@ input[type="search"] {
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.profile fieldset button.btn,
-.widget.signupform fieldset button.btn,
-.blog-search-submit-button {
-    padding: 7px 20px 8px;
-    margin: 0;
-    border: none;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-.widget.profile fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-}
 
 /* ===============================
    LINKED IN
@@ -1565,8 +1546,12 @@ input[type="search"] {
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.signupform fieldset button.btn, .blog-search-submit-button {
-	line-height: 25px;
+.widget.profile fieldset button.btn,
+.widget.signupform fieldset button.btn,
+.blog-search-submit-button {
+    height: 40px;
+    vertical-align: top;
+    padding: 7px 20px 8px;
     margin: 0;
     border: none;
     font-family: @font-swatch7-font-family;
@@ -1574,26 +1559,21 @@ input[type="search"] {
     font-weight:@font-swatch7-font-weight;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
+    line-height: 25px;
     text-decoration: none;
     letter-spacing: 1px;
-	cursor: pointer;
-    height: 40px;
-    vertical-align: top;
+    cursor: pointer;
     &:hover {
-    	background-color: @font-swatch7-background-color-hover;
+        background-color: @font-swatch7-background-color-hover;
     }
 }
 
-.widget.signupform fieldset button.btn {
+.widget.signupform fieldset button.btn,
+.widget.profile fieldset button.btn {
     margin-left: -5px;
     @media @mobile {
         margin-left: 0;
     }
-}
-
-.widget.signupform fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
 }
 
 /* ===============================
