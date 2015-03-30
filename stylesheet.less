@@ -181,6 +181,10 @@ button.btn,
     }
     @media @tablet {
         padding-left:0;
+        padding-top: 30px;
+    }
+    @media @mobile {
+        padding-top: 20px;
     }
 }
 
@@ -507,6 +511,9 @@ button.btn,
         top: 56px;
         width: 50%;
     }
+    @media @mobile {
+        top: 30px;
+    }
 }
 
 .feature-slideshow .widget.responsiveslideshow .title {
@@ -648,6 +655,16 @@ button.btn,
 	.feature-slideshow .widget.responsiveslideshow .image-wrapper {
 	    height: 82%;
 	}
+}
+
+@media @mobile {
+    .feature-slideshow {
+        .widget.responsiveslideshow .slideshow-widget,
+        .widget.responsiveslideshow .slideshow-image-list,
+        .widget.responsiveslideshow .slideshow-image-list .slideshow-image-item {
+            height: auto;
+        }
+    }
 }
 
 
