@@ -242,7 +242,6 @@ button.btn,
     margin-top: 3em;
     color: @color-swatch6;
     text-align: left;
-    min-height: 250px;
 }
 
 .bk-footer h1,
@@ -2149,4 +2148,30 @@ select {
 
 .clearfix {
     *zoom: 1
+}
+
+
+// ------------------------------------------
+// sticky footer
+// ------------------------------------------
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 88vh;
+    flex-direction: column;
+     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.flex-container .zone-area {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }

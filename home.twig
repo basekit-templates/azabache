@@ -1,27 +1,29 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-<div class="zone-area clearfix">
-	<div class="main wrapper clearfix home-page">
-		<div class="feature-slideshow">
-			 {{widget('responsiveslideshow', 'responsiveslideshow',
-			  {'duration':'3',
-				'transSpeed': '1000',
-				'transType': 'fade',
-				'showButtons': false,
-				'showBullets': true,
-				'allowPause': false,
-				'allowLoop': true,
-				'showDescription': true,
-				'showTitle': true,
-				'images': [
-					{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/1.jpg'), 'title':'Lorem ipsum dolor, sit amet consetetura adipicing.', 'description': 'Fusce massa cursus ut elementum, pellentesque et sollicitudin turpis. Phasellus vel turpis vehicula.'},
-					{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/2.jpg'), 'title':'Prasent posuere veslum sanesas semper se sagittis.', 'description': 'Vehicula tortor tristique fermentum amet a sem. cursus ut elementum uter, pellentesquer massa cursu.'},
-					{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/3.jpg'), 'title':'Suspendisse nisi sapien orna eu fringilla eget.', 'description': 'Fusce libero massa, cursus ut elementum, pellentesque sollicitudin turpis. Phasellus vel turpis est.'}
-				]
-				})|raw}}
+<div class="flex-container">
+	<div class="zone-area clearfix">
+		<div class="main wrapper clearfix home-page">
+			<div class="feature-slideshow">
+				 {{widget('responsiveslideshow', 'responsiveslideshow',
+				  {'duration':'3',
+					'transSpeed': '1000',
+					'transType': 'fade',
+					'showButtons': false,
+					'showBullets': true,
+					'allowPause': false,
+					'allowLoop': true,
+					'showDescription': true,
+					'showTitle': true,
+					'images': [
+						{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/1.jpg'), 'title':'Lorem ipsum dolor, sit amet consetetura adipicing.', 'description': 'Fusce massa cursus ut elementum, pellentesque et sollicitudin turpis. Phasellus vel turpis vehicula.'},
+						{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/2.jpg'), 'title':'Prasent posuere veslum sanesas semper se sagittis.', 'description': 'Vehicula tortor tristique fermentum amet a sem. cursus ut elementum uter, pellentesquer massa cursu.'},
+						{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/3.jpg'), 'title':'Suspendisse nisi sapien orna eu fringilla eget.', 'description': 'Fusce libero massa, cursus ut elementum, pellentesque sollicitudin turpis. Phasellus vel turpis est.'}
+					]
+					})|raw}}
+			</div>
+			{{zone('main')|raw}}
 		</div>
-		{{zone('main')|raw}}
 	</div>
 </div>
 {% endblock %}
