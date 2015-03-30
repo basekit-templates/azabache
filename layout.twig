@@ -15,10 +15,12 @@
 	</head>
 
 	<body class="{{ page.backgroundClass }}">
-		{% include "header.twig" %}
-		{% block content %}
-		{% endblock %}			
-		{% include "footer.twig" %}
+		<div class="flex-container">
+			{% include "header.twig" %}
+			{% block content %}
+			{% endblock %}
+			{% include "footer.twig" %}
+		</div>
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
@@ -29,7 +31,7 @@
 		</script>
 		{% include basekit.bodyScript %}
 	</body>
-	
+
 </html>
 
 

@@ -1851,7 +1851,10 @@ a.btn.ecom-product-go-to-checkout-btn {
 
 	.bk-footer {
 	  min-height: auto;
-	  padding: 3% 5%;
+	  padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: 5%;
+      padding-right: 5%;
 	}
 
 	.widget.profile .twitter {
@@ -2154,23 +2157,26 @@ select {
 // sticky footer
 // ------------------------------------------
 
-.flex-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    min-height: 90vh;
-    flex-direction: column;
-     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-}
 
-.flex-container .zone-area {
-    flex: 1;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+@media only screen and (min-width: 768px) {
+    .flex-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+        flex-direction: column;
+         -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .flex-container .zone-area {
+        flex: 1;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
 }
