@@ -1,7 +1,7 @@
 {
 	"name":"Azabache",
 	"thumbnail":"azabache.png",
-	"screenshot":"azabache.png",
+	"screenshot":"azabache-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes":["home"],
     "tags": {
