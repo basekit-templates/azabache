@@ -1109,7 +1109,8 @@ hr.line.align-right {
 .widget.contactform fieldset input,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
 .widget.ecomcheckout .delivery select,
-select {
+select,
+.advancedcontactform input {
     height: 40px;
     width: 100%;
     border: 1px solid lighten(@color-swatch5, 68%);
@@ -1127,8 +1128,13 @@ select {
 	}
 }
 
+.advancedcontactform input {
+    margin-bottom: 10px;
+}
+
 .widget.contactform fieldset textarea,
-.fonectacontactform textarea {
+.fonectacontactform textarea,
+.advancedcontactform textarea {
     height: 100px;
     width: 100%;
     background-color: #ffffff;
@@ -1150,7 +1156,8 @@ select {
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform button {
     padding: 16px 40px;
     margin: 0;
     border: none;
@@ -1163,7 +1170,8 @@ select {
     letter-spacing: 1px;
 }
 
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
