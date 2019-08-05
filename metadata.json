@@ -1,5 +1,6 @@
 {
 	"name":"Azabache",
+	"versionTenCompatible": 1,
 	"thumbnail":"azabache.png",
 	"screenshot":"azabache-screenshot.jpg",
 	"templateType":"standard",
