@@ -10,18 +10,24 @@
 // -----------------------------
 
 
+.logo-nav {
+    z-index: inherit;
+}
+
+
 // Template wrapper (replace with corresponding template classes)
 .main.wrapper {
     @media only screen and (min-width: 1380px) {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
 }
   
 // Main content spacing (replace with corresponding template class)
 .main {
   padding: 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -31,17 +37,42 @@
 }
 
 .zone-area {
-    padding-left:250px;
+    padding-left: 22%;
+    
+    @media only screen and (min-width: 1290px) {
+        padding-left: 250px;
+    }
+    @media @tablet {
+        padding-left: 0;
+    }
+}
+&.edit .zone-area {
+    @media only screen and (max-width: 1290px) {
+        padding-left: ~"calc(22% + 44px)";
+    }
+    @media only screen and (max-width: 930px) {
+        padding-left: 22%;
+    }
+    @media @tablet {
+        padding-left: 0;
+    }
 }
 
 .widget.responsiveslideshow {
-    padding-left:50px;
-    padding-right: 5%;
+  max-width: @container-width;
+  margin-left: @spacing__first--desktop;
+  margin-right: 5%;
 }
 
-.feature-slideshow {
-    margin-bottom: 0;
+
+.default-page #page-zones__main > .style--light:first-child .row__container {
+  padding-top: 0;
 }
+
+
+
+
+
 
 // Migration styles
 // -----------------------------
@@ -49,9 +80,7 @@
 
 // Replace with corresponding template values
 @container-width: 1024px;
-
-@spacing__first--desktop: 50px;
-
+@spacing__first--desktop: 48px;
 @spacing--other: 30px;
 
 
@@ -59,17 +88,20 @@
 .empty-zone,
 #page-zones__main:empty,
 #page-zones__main > .widget:not(.row),
-.row:not(.widget):not(.row--width-no-padding) .row__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: @container-width;
-  width: 90%;
+.row:not(.widget):not(.row--width-no-padding) .row__container,
+.widget.responsiveslideshow {
+  margin-left: @spacing__first--desktop;
+  margin-right: 5%;
+  
+  @media @tablet {
+    margin-left: 5%;
+  }
 }
 
 
 // Move spacing to first widget in the main zone (not sections)
 &.edit #page-zones__main-overlay + .widget:not(.row),
-#page-zones__main > .widget:not(.row):first-child {
+#page-zones__main > .widget:not(.row):not(.blogpostlist):not(.blogpost):not(.ecomproductslist):not(.ecomproduct):first-child {
   margin-top: @spacing__first--desktop;
 }
 
@@ -102,8 +134,11 @@
   }
 }
 
-.row-overlay__edit-control {
-    left:108px;    
+
+// Section controls
+.row-overlay:before {
+    background: none !important;
 }
+
 
 } // End of #migrated-site
