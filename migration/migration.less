@@ -58,12 +58,6 @@
     }
 }
 
-.widget.responsiveslideshow {
-  max-width: @container-width;
-  margin-left: @spacing__first--desktop;
-  margin-right: 5%;
-}
-
 
 .default-page #page-zones__main > .style--light:first-child .row__container {
   padding-top: 0;
@@ -90,11 +84,14 @@
 #page-zones__main > .widget:not(.row),
 .row:not(.widget):not(.row--width-no-padding) .row__container,
 .widget.responsiveslideshow {
-  margin-left: @spacing__first--desktop;
-  margin-right: 5%;
-  
-  @media @tablet {
-    margin-left: 5%;
+  margin: 0 5%;
+  width: 90%;
+
+  @media only screen and (min-width: 1380px) {
+    margin: 0;
+    max-width: @container-width;
+    padding-left: 50px;
+    width: 100%;
   }
 }
 
